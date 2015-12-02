@@ -2,14 +2,14 @@
 
 <form action="/users/<%= @user.id %>" method="POST">
 	
-	<input type="hidden" name="method" value="patch">
+	<input type="hidden" name="_method" value="patch">
 
 	<label>Name: </label>
-	<input type="text" name="name"><br>
+	<input type="text" name="name" value="<%= @user.name %>"><br>
 	<labe>Email: </label>
-	<input type="text" name="email"><br>
+	<input type="text" name="email" value="<%= @user.email %>"><br>
 	<label>Password: </label>
-	<input type="password" name="password"><br>
+	<input type="password" name="password" value="<%= @user.password %>"><br>
 	<labe>Description: </label>
 	<input type="text" name="description"><br>
 	

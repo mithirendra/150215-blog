@@ -4,4 +4,10 @@ Name: <%= @user.name %><br>
 Email: <%= @user.email %><br>
 Description: <%= @user.description %><br>
 
-<a href="/users/<%= @user.id %>/edit">Edit Profile</a>
+<a href="/users/<%= @user.id %>/edit"><button>Edit Profile</button></a><br>
+
+<form action="/users/<%= @user.id %>" method="POST">
+	<input type="hidden" name="_method" value="delete">
+	<input type="submit" value="Delete Profile">
+</form>
+
